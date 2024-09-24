@@ -1,8 +1,6 @@
 package tech.sportsrental.api.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.UUID;
@@ -12,10 +10,16 @@ import java.util.UUID;
 @Table(name = "tb_review")
 public class ReviewModel {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private UUID id;
 
+    @ManyToOne
+    @JoinColumn(name = "equipment_id", nullable = false)
     private EquipmentModel equipment;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
     private UserModel user;
 
     private double rating;
