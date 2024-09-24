@@ -4,10 +4,12 @@ import jakarta.persistence.*;
 import lombok.Data;
 import tech.sportsrental.api.enums.Role;
 
+import java.util.List;
 import java.util.UUID;
 
 @Data
 @Entity
+@Table(name = "tb_user")
 public class UserModel {
 
     @Id
@@ -21,5 +23,5 @@ public class UserModel {
     private Role role;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Rental> rentals;
+    private List<RentalModel> rentals;
 }
