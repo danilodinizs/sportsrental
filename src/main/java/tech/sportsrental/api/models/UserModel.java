@@ -2,6 +2,7 @@ package tech.sportsrental.api.models;
 
 import jakarta.persistence.Entity;
 import lombok.Data;
+import tech.sportsrental.api.enums.Role;
 
 import java.util.UUID;
 
