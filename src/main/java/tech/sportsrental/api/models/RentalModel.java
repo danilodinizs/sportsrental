@@ -13,7 +13,7 @@ public class RentalModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private UUID rentalId;
 
     @ManyToOne
     @JoinColumn(name = "equipment_id", nullable = false)

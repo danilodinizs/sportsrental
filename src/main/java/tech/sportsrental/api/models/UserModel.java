@@ -14,7 +14,7 @@ public class UserModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private UUID userId;
 
     private String username;
     private String password;

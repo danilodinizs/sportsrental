@@ -13,11 +13,12 @@ public class EquipmentModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private UUID equipmentId;
 
     private String type;
-    private String condition;
-    private double dailyRate;
+    @Column(name = "'condition'")
+    private String statusCondition;
+    private Double dailyRate;
     private String location;
     private String availability;
 

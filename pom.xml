@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>tech.sportrent.api</groupId>
-	<artifactId>sportrent</artifactId>
+	<artifactId>sportsrental</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sportrent</name>
 	<description>A Sport Rent application</description>

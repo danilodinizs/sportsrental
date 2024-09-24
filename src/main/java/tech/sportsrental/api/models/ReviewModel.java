@@ -12,7 +12,7 @@ public class ReviewModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private UUID reviewId;
 
     @ManyToOne
     @JoinColumn(name = "equipment_id", nullable = false)
@@ -22,6 +22,6 @@ public class ReviewModel {
     @JoinColumn(name = "user_id", nullable = false)
     private UserModel user;
 
-    private double rating;
+    private Double rating;
     private String comment;
 }
